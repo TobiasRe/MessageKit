@@ -34,6 +34,7 @@
 		8962AC991F87AB860030B058 /* MessagesDisplayDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962AC811F87AB230030B058 /* MessagesDisplayDelegateTests.swift */; };
 		8962AC9A1F87ABB20030B058 /* MockMessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962AC7A1F87AB230030B058 /* MockMessagesDataSource.swift */; };
 		8962AC9C1F87ABC60030B058 /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962AC7B1F87AB230030B058 /* MockMessage.swift */; };
+		AF8B14341FF4D5B8007465EE /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B14331FF4D5B8007465EE /* CustomMessageCell.swift */; };
 		B006FA021F99DE2100509C46 /* MessageIntermediateLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006FA011F99DE2100509C46 /* MessageIntermediateLayoutAttributes.swift */; };
 		B0C8D99B1F73076B000A86E4 /* MessageKitAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0C8D99A1F73076B000A86E4 /* MessageKitAssets.bundle */; };
 		B7A03F181F86682C006AEF79 /* MessagesCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A03F161F86682C006AEF79 /* MessagesCollectionViewFlowLayout.swift */; };
@@ -133,6 +134,7 @@
 		8962AC871F87AB230030B058 /* InputTextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextViewTests.swift; sourceTree = "<group>"; };
 		8962AC881F87AB230030B058 /* MessageInputBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputBarTests.swift; sourceTree = "<group>"; };
 		8962AC891F87AB230030B058 /* MessageDateHeaderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDateHeaderViewTests.swift; sourceTree = "<group>"; };
+		AF8B14331FF4D5B8007465EE /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		B006FA011F99DE2100509C46 /* MessageIntermediateLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageIntermediateLayoutAttributes.swift; sourceTree = "<group>"; };
 		B0C8D99A1F73076B000A86E4 /* MessageKitAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MessageKitAssets.bundle; sourceTree = "<group>"; };
 		B7A03F161F86682C006AEF79 /* MessagesCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				B7A03F391F866946006AEF79 /* MediaMessageCell.swift */,
 				B7A03F7A1F866B85006AEF79 /* MessageCollectionViewCell.swift */,
 				B7A03F361F866946006AEF79 /* TextMessageCell.swift */,
+				AF8B14331FF4D5B8007465EE /* CustomMessageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				B7A03F291F866895006AEF79 /* Sender.swift in Sources */,
 				B7A03F4F1F86697C006AEF79 /* MessagesViewController.swift in Sources */,
 				B7A03F251F866895006AEF79 /* NSConstraintLayoutSet.swift in Sources */,
+				AF8B14341FF4D5B8007465EE /* CustomMessageCell.swift in Sources */,
 				B7A03F341F866940006AEF79 /* MessageFooterView.swift in Sources */,
 				B7A03F621F8669CA006AEF79 /* MessageInputBarDelegate.swift in Sources */,
 				0EE91E661FDEC888005420A2 /* CGRect+Extensions.swift in Sources */,
@@ -627,7 +631,6 @@
 			files = (
 				8962AC8C1F87AB7D0030B058 /* AvatarViewTests.swift in Sources */,
 				1F066E141FD90BB700E11013 /* MessageLabelSpec.swift in Sources */,
-				8962AC971F87AB860030B058 /* DetectorTypeTests.swift in Sources */,
 				8962AC941F87AB860030B058 /* MessageKitDateFormatterTests.swift in Sources */,
 				8962AC8E1F87AB7D0030B058 /* InputTextViewTests.swift in Sources */,
 				8962AC911F87AB860030B058 /* MessagesViewControllerTests.swift in Sources */,
@@ -637,7 +640,6 @@
 				8962AC8F1F87AB7D0030B058 /* MessageInputBarTests.swift in Sources */,
 				1F066E131FD90BB600E11013 /* MessagesViewControllerSpec.swift in Sources */,
 				1F066E1D1FDA3C1700E11013 /* SenderSpec.swift in Sources */,
-				1F7FC8CC1FD2700B006CC979 /* MessagesViewControllerSpec.swift in Sources */,
 				8962AC8A1F87AB7D0030B058 /* MessagesCollectionViewTests.swift in Sources */,
 				8962AC8D1F87AB7D0030B058 /* MessageCollectionViewCellTests.swift in Sources */,
 				8962AC991F87AB860030B058 /* MessagesDisplayDelegateTests.swift in Sources */,

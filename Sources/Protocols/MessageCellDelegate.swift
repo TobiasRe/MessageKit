@@ -66,6 +66,13 @@ public protocol MessageCellDelegate: MessageLabelDelegate {
     /// `indexPath(for: cell)` method. Then using the returned `IndexPath` with the `MessagesDataSource`
     /// method `messageForItem(at:indexPath:messagesCollectionView)`.
     func didTapTopLabel(in cell: MessageCollectionViewCell)
+    
+    /// Called when custom message data will be shown.
+    ///
+    /// - Parameters:
+    ///   - message: The message with custom data to display.
+    ///
+    func viewForCustomCell(with message: MessageType) -> UIView
 
 }
 

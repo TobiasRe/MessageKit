@@ -184,6 +184,28 @@ public protocol MessagesLayoutDelegate: AnyObject {
     ///
     /// The default value returned by this method is `false`.
     func shouldCacheLayoutAttributes(for message: MessageType) -> Bool
+    
+    // MARK: - Custom Messages
+    
+    /// Specifies the width for a `MessageContainerView`.
+    ///
+    /// - Parameters:
+    ///   - message: The `MessageType` that will be displayed by this cell.
+    ///   - indexPath: The `IndexPath` of the cell.
+    ///   - maxWidth: The max available width for the `MessageContainerView` respecting the cell's other content.
+    ///   - messagesCollectionView: The `MessagesCollectionView` in which this cell will be displayed.
+    ///
+    /// The default value returned by this method is the `maxWidth`.
+    func widthForCustom(message: MessageType, at indexPath: IndexPath, with maxWidth: CGFloat, in messagesCollectionView: MessagesCollectionView) -> CGFloat
+    
+    /// Specifies the height for a `MessageContainerView`.
+    ///
+    /// - Parameters:
+    ///   - message: The `MessageType` that will be displayed by this cell.
+    ///   - indexPath: The `IndexPath` of the cell.
+    ///   - maxWidth: The max available width for the `MessageContainerView` respecting the cell's other content.
+    ///   - messagesCollectionView: The `MessagesCollectionView` in which this cell will be displayed.
+    func heightForCustom(message: MessageType, at indexPath: IndexPath, with maxWidth: CGFloat, in messagesCollectionView: MessagesCollectionView) -> CGFloat
 
 }
 
@@ -262,6 +284,11 @@ public extension MessagesLayoutDelegate {
     // MARK: - Location Messages Defaults
 
     func widthForLocation(message: MessageType, at indexPath: IndexPath, with maxWidth: CGFloat, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return maxWidth
+    }
+    
+    // MARK: - Custom Messages Defaults
+    func widthForCustom(message: MessageType, at indexPath: IndexPath, with maxWidth: CGFloat, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return maxWidth
     }
 

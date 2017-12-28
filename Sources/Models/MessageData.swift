@@ -51,6 +51,9 @@ public enum MessageData {
 
     /// An emoji message.
     case emoji(String)
+    
+    /// A custom message.
+    case custom(Any)
 
     // MARK: - Not supported yet
 
