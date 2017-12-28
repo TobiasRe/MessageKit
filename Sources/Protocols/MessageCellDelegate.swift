@@ -72,7 +72,7 @@ public protocol MessageCellDelegate: MessageLabelDelegate {
     /// - Parameters:
     ///   - message: The message with custom data to display.
     ///
-    func viewForCustomCell(with message: MessageType) -> UIView
+    func viewForCustomCell(with message: MessageType, isCurrentSender: Bool) -> UIView
 
 }
 
