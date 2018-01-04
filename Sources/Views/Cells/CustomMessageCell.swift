@@ -32,7 +32,7 @@ open class CustomMessageCell: MessageCollectionViewCell {
             if let  dataSource = messagesCollectionView.messagesDataSource {
                 isCurrentSender = dataSource.isFromCurrentSender(message: message) ? true : false
             }
-            if let view = delegate?.viewForCustomCell(with: message, isCurrentSender: isCurrentSender) {
+            if let view = delegate?.viewForCustomCell(with: message, isCurrentSender: isCurrentSender, frame: self.customView.frame) {
                 self.customView.removeFromSuperview()
                 self.customView = view
                 setupSubviews()

@@ -71,8 +71,10 @@ public protocol MessageCellDelegate: MessageLabelDelegate {
     ///
     /// - Parameters:
     ///   - message: The message with custom data to display.
+    ///   - isCurrentSender: Indicates if the message is from the user.
+    ///   - frame: The frame to use for the cutom view.
     ///
-    func viewForCustomCell(with message: MessageType, isCurrentSender: Bool) -> UIView
+    func viewForCustomCell(with message: MessageType, isCurrentSender: Bool, frame: CGRect) -> UIView
 
 }
 
